@@ -29,33 +29,23 @@ explorer "D:\Stan\Tasks"
 explorer "D:\Stan\Tasks"
 explorer "D:\Stan\Tasks"
 echo D:\stan_lin\fw\Tasks opened!
+powershell -Command "Start-Sleep -Milliseconds 500"
 
-REM 開啟應用程式
-powershell -Command "Start-Sleep -Milliseconds 500"
-echo Next step: Open Microsoft Edge
-"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
-powershell -Command "Start-Sleep -Milliseconds 500"
-echo Microsoft Edge opened!
-
-echo Next step: Open Mozilla Firefox
-"C:\Program Files\Mozilla Firefox\firefox.exe"
-powershell -Command "Start-Sleep -Milliseconds 500"
-echo Mozilla Firefox opened!
-
-echo Next step: Open Microsoft Outlook
-start /B "" "C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.exe"
-powershell -Command "Start-Sleep -Milliseconds 500"
-echo Microsoft Outlook opened!
 
 echo Next step: Open taskmgr
 start /B "" taskmgr
 powershell -Command "Start-Sleep -Milliseconds 500"
 echo taskmgr opened!
 
-echo Next step: Open AndeSight
-start /B "" "C:\Andestech\AndeSight_STD_v324\ide\AndeSight.exe"
+echo Next step: Open GitExtensions
+start /B "" "C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\GitExtensions.lnk"
 powershell -Command "Start-Sleep -Milliseconds 500"
-echo AndeSight opened!
+echo GitExtensions opened!
+
+echo Next step: Open Google Chrome
+start /B "" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Google Chrome.lnk"
+powershell -Command "Start-Sleep -Milliseconds 500"
+echo Google Chrome opened!
 
 echo Next step: Open Visual Studio Code
 start /B "" "C:\Users\User\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Visual Studio Code\Visual Studio Code.lnk"
@@ -63,7 +53,7 @@ powershell -Command "Start-Sleep -Milliseconds 500"
 echo Visual Studio Code opened!
 
 echo Next step: Open Microsoft Excel
-start /B "" "C:\Program Files\Microsoft Office\root\Office16\EXCEL.exe" "D:\Stan\buget_stan.xlsx"
+start /B "" "D:\Stan\buget_stan.xlsx"
 powershell -Command "Start-Sleep -Milliseconds 500"
 echo Microsoft Excel opened!
 
@@ -75,6 +65,7 @@ echo Obsidian opened!
 echo All programs and folders have been opened!
 echo %time%
 
+REM 這部分可以放你要自動執行的ps1檔路徑
 timeout /t 1
-powershell -ExecutionPolicy Bypass -File "D:\stan_lin\side_projects\myshell\eye_protect.ps1"
+powershell -ExecutionPolicy Bypass -File "D:\Stan\Tasks\task03_app_side_project\window_tool\eye_protect.ps1"
 pause
